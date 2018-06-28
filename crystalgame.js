@@ -39,14 +39,17 @@ function changeValue(){
    console.log(topaz,ruby,emerald,saphire);
 };
 function checkScore(){
-    if (score = target){
+    if (score === target){
         wins++;
         $("#wl").text("W: " + wins + " "+ "L: " + losses);
+        target = Math.floor((Math.random()*100)+20);
+        restartGame();
     
     }
     if (score > target){
-        losses++
+        losses++;
         $("#wl").text("W: " + wins + " "+ "L: " + losses);
+        score = 0;
         restartGame();
     }
 }
@@ -68,47 +71,22 @@ $("#topaz").on("click", function() {
 $("#emerald").on("click", function() {
     score = score + emerald;
     $("#score").text("Score: " + score);
+    checkScore();
 });
 
 $("#ruby").on("click", function() {
     score = score + ruby;
     $("#score").text("Score: " + score);
+    checkScore();
 });
 
 $("#saphire").on("click", function() {
     score = score + saphire;
     $("#score").text("Score: " + score);
+    checkScore();
 });
 $(".reset-button").on("click", function() {
-
+    restartGame();
 });
 
-// Keyboard move controls
-// $(document).keyup(function(e) {
-// switch (e.which) {
-
-//         // Move Buttons (Keyboard Down)
-//         case 40:
-//         captainPlanet.animate({ top: "+=200px" }, "normal");
-//         break;
-
-//         // Move Buttons (Keyboard Right)
-//         case 39:
-//         captainPlanet.animate({ left: "+=200px" }, "normal");
-//         break;
-
-//         // Move Buttons (Keyboard Up)
-//         case 38:
-//         captainPlanet.animate({ top: "-=200px" }, "normal");
-//         break;
-
-//         // Move Buttons (Keyboard Left)
-//         case 37:
-//         captainPlanet.animate({ left: "-=200px" }, "normal");
-//         break;
-
-//         default:
-//         break;
-//     }
-// });
 });
