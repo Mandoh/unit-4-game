@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./crystalgame.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <strong>Crystal Collector</strong>
+        </h1>
+      </div>
+      <div class="card">
+            <h4 class="card-header">Scoreboard</h4>
+            <div class="card-body">
+        <div id="target" class="text-center display">
+           
+            </div>
+        <hr>
+        <div id="score" class="text-center display"> 
+            
+            </div>
+        <hr>
+        <div id="wl" class="text-center display"> 
+    
+            </div>
+        </div>
+      </div>
+        
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div id="crystals" class="card">
+            <h4 class="card-header">Crystals</h4>
+            <div class="card-body">
+              <div class="text-center mb-1">
+                <button id = "topaz" class="btn btn-dark btn-lg fa topaz-button crystal"><img src = "./TempAss/topaz.png" width = 225px height = 225px/></button>
+              </div>
+              <div class="text-center">
+                <button id = "emerald" class="btn btn-dark btn-lg fa emerald-button crystal"><img src = "./TempAss/emerald.jpg"/></button>
+                <button id = "ruby" class="btn btn-dark btn-lg fa ruby-button crystal"><img src = "./TempAss/ruby.jpg"/></button>
+                <button id = "saphire" class="btn btn-dark btn-lg fa saphire-button crystal"><img src = "./TempAss/saphire.jpg"/></button>
+              </div>
+              <br>
+              <div class="text-center">
+                <button class="btn btn-dark btn-lg reset-button">
+                  <span class="fa fa-comment"></span> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
