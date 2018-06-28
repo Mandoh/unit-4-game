@@ -18,7 +18,9 @@ var saphire;
 
 //functions
 function restartGame(){
-    score = 0
+    score = 0;
+    $("#score").text("Score: " + score);
+    addersArray = [];
     changeAdders();
     changeValue();
 
@@ -28,8 +30,8 @@ function changeAdders(){
     for (var i = 0; i < 4; i++ ){
         var rand = Math.floor((Math.random()*12)+1);
         addersArray.push(rand);
-        console.log(addersArray);
     }
+    console.log(addersArray);
 };
 function changeValue(){
     topaz = addersArray[0];
@@ -43,6 +45,7 @@ function checkScore(){
         wins++;
         $("#wl").text("W: " + wins + " "+ "L: " + losses);
         target = Math.floor((Math.random()*100)+20);
+        $("#target").text("Target: " + target);
         restartGame();
     
     }
